@@ -18,10 +18,10 @@ export default function Food(){
     return(
         <div className="max-w-[1640px] p-4 mx-auto">
             <h2 className="text-center text-orange-500 font-bold text-4xl">Top Rated Menu Items</h2>
-            <div className="flex flex-col lg:flex-row justify-between">
+            <div className="flex flex-col lg:flex-row justify-between gap-y-4">
                 <div className="flex flex-col justify-between font-bold gap-y-1">
                     <p>Filter Type</p>
-                    <div className="flex gap-x-2 text-orange-500 font-normal">
+                    <div className="flex flex-wrap gap-x-2 text-orange-500 font-normal">
                         <button className={`border-orange-500 hover:bg-orange-500 hover:text-white ${selectedType==="all" ? "bg-orange-500 text-white" : ""}`} onClick={()=>{
                             setFood(data)
                             setSelectedType("all")
@@ -33,8 +33,7 @@ export default function Food(){
                         <button className={`border-orange-500 hover:bg-orange-500 hover:text-white ${selectedType==="pizza" ? "bg-orange-500 text-white" : ""}`} onClick={handleType} name="pizza">Pizza</button>
                         <button className={`border-orange-500 hover:bg-orange-500 hover:text-white ${selectedType==="salad" ? "bg-orange-500 text-white" : ""}`} onClick={handleType} name="salad">Salads</button>
                         <button className={`border-orange-500 hover:bg-orange-500 hover:text-white ${selectedType==="chicken" ? "bg-orange-500 text-white" : ""}`} onClick={handleType} name="chicken">Chicken</button>
-                    </div>
-                    
+                    </div>                    
                 </div>
                 <div className="flex flex-col justify-between font-bold gap-y-1">
                     <p>Filter Price</p>
